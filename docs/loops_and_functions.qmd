@@ -1,0 +1,54 @@
+```{r}
+weekdays <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+
+transects <- c("Transect A", "Transect B", "Transect C")
+
+out_matrix <- matrix(nrow = length(weekdays), ncol = length(transects)) 
+
+for (i in seq_along(weekdays)) { 
+  for (j in seq_along(transects)) { 
+   mat <-  print(paste0(weekdays[i], "-", transects[j]))
+    out_matrix[i, j] <- mat
+    }
+}
+```
+
+```{r}
+print(out_matrix)
+```
+
+```{r}
+# Write a function called force that calculates a force (in Newtons), given inputs of mass (in kg) and acceleration (in (recall: ), and returns a statement “The resulting force is ___ Newtons.”
+
+
+force <- function(m, a) {
+ newtons <- m * a 
+ paste("The resulting force is", newtons, "newtons")
+} 
+```
+
+```{r}
+fish_parms <- data.frame(sci_name = c("Chanos chanos", "Sphyraena barracuda", "Caranx ignobilis"),
+                         common_name = c("Milkfish", "Great barracuda", "Giant trevally"),
+                         a_est = c(0.0905, 0.0181, 0.0353),
+                         b_est = c(2.52, 3.27, 3.05))
+print(fish_parms)
+
+```
+
+```{r}
+fish_weight <- function(fish_parms) {
+    for (i in 1:ncol(common_name)) 
+       for (j in seq_along(b_est)) {{
+    if(is.character(fish_parms[[i]])) {           
+      fish_name <- common_name[[i]])
+      tot_length <- fish_parms[[j]]
+      
+      print(paste("Weight", fish_name, "is", tot_length)))
+    }  
+   }
+}
+  }
+    
+```
+
