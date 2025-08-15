@@ -38,17 +38,23 @@ print(fish_parms)
 
 ```{r}
 fish_weight <- function(fish_parms) {
-    for (i in 1:ncol(common_name)) 
-       for (j in seq_along(b_est)) {{
-    if(is.character(fish_parms[[i]])) {           
-      fish_name <- common_name[[i]])
-      tot_length <- fish_parms[[j]]
-      
-      print(paste("Weight", fish_name, "is", tot_length)))
-    }  
-   }
+    fish_sub <- fish_parms |> 
+    filter(common_name == fish_name)
 }
-  }
-    
 ```
 
+
+```{r}
+wave_power <- function(wave_height, wave_period) {
+  0.5 * (wave_height ^ 2) * wave_period
+}
+
+wave_heights <- seq(from = 0, to = 3, by = 0.2)
+
+wave_power(wave_height = wave_heights, wave_period = 8)
+```
+
+
+
+
+```{r}
